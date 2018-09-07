@@ -1,0 +1,19 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>NPM</th>
+      <th>Nama</th>
+      <th>Alamat</th>
+      <th colspan="2">Proses</th>
+    </tr>
+  </thead>
+    <tr *ngFor="let item of mahasiswa">
+        <td>{{ item.npm }}</td>
+        <td>{{ item.nama }}</td>
+        <td>{{ item.alamat }}</td>
+        <td><a [routerLink]="['/edit', item.id]" class="btn btn-primary">Edit</a></td>
+        <td><button (click)="hapusMahasiswa(item.id)"  class="btn btn-danger">Delete</button></td>
+    </tr>
+  <tbody>
+  </tbody>
+</table>
